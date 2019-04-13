@@ -1,0 +1,14 @@
+# Default
+node_modules/
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+
+# Custom
+package-lock.json
+yarn.lock
+config/
+.env
