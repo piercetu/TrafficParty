@@ -15,7 +15,6 @@ export default class Home extends Component {
   static navigationOptions = {
     header: null
   }
-<<<<<<< HEAD:components/Home.js
 
   logging = () => {
     console.log('Hi');
@@ -30,9 +29,6 @@ export default class Home extends Component {
   }
   
 
-=======
-  
->>>>>>> 0ff9692db17309a4070f1151546a5d9af229b470:components/Auth/Login.js
   render() {
     return (
       <View style={styles.container}>
