@@ -11,30 +11,30 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 // Redux Imports ----------------------------------------- /
-import { Provider } from 'redux';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import configureStore from './components/Redux/configureStore';
 
 // Auth Screens Import ---------------------------------- /
 import Lobby from './components/Lobby';
-import Login from './components/Auth';
+import Home from './components/Home';
 import Splash from './components/Splash';
 
 
 // Navigation ------------------------------------------ /
 const Nav = createAppContainer(
   createStackNavigator({
-    Login: { screen: Login },
-    Register: { screen: Register }
+    Home: { screen: Home }
   })
 );
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.configureStore = configureStore();
   }
+
   render() {
     return (
       <Provider store={this.configureStore.store}>

@@ -4,7 +4,7 @@ const initialState = {
     user: null
 };
 
-export default AuthReducer = (state, action) => {
+export default AuthReducer = (state = initialState, action) => {
     switch (action.type) {
         case EMAIL_LOGIN:
             return {
@@ -21,5 +21,5 @@ export default AuthReducer = (state, action) => {
 
         default:
             return state;
-    }
-}
+    };
+};
