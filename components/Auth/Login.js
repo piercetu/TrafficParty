@@ -7,11 +7,7 @@ export default class Home extends Component {
   static navigationOptions = {
     header: null
   }
-
-  logging = () => {
-    console.log('Hi');
-  }
-
+  
   render() {
     return (
       <View style={styles.container}>
