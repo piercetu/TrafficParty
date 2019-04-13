@@ -44,8 +44,10 @@ class Login extends PureComponent {
   }
 
   render() {
-    if (this.state.user)
-      this.props.navigation.navigate('Home')
+    // if (this.state.user) {
+    //   this.props.navigation.navigate('Home');
+    //   return null;
+    // }
     return (
       <View style={styles.container}>
         <Spinner
