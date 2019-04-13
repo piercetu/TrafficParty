@@ -22,7 +22,7 @@ const Nav = createAppContainer(
   createStackNavigator({
     Home: { screen: Home },
   })
-)
+);
 
 export default class App extends React.Component {
   render() {
