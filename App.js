@@ -18,14 +18,14 @@ import configureStore from './components/Redux/configureStore';
 
 // Auth Screens Import ---------------------------------- /
 import Lobby from './components/Lobby';
-import Home from './components/Home';
+import Login from './components/Login';
 import Splash from './components/Splash';
 
 
 // Navigation ------------------------------------------ /
 const Nav = createAppContainer(
   createStackNavigator({
-    Home: { screen: Home }
+    Login: { screen: Login }
   })
 );
 
