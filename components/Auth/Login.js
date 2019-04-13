@@ -1,8 +1,8 @@
 // Home Page
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default class Home extends Component {
+export default class Home extends PureComponent {
   // Hide the header bar section
   static navigationOptions = {
     header: null
@@ -16,7 +16,6 @@ export default class Home extends Component {
         <TouchableOpacity onPress={this.logging}>
           <Image style={styles.buttonFacebook} source={require('../resources/button-facebook.png')} />
         </TouchableOpacity>
-
       </View>
     );
   }
