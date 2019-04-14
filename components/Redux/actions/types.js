@@ -9,3 +9,5 @@ export const LOGOUT = 'logout';
 /**
  * Party-related action types
  */
+export const PARTY_NOT_FOUND = 'party_not_found';
+export const JOINED_PARTY = 'joined_party';

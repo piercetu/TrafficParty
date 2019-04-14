@@ -1,4 +1,4 @@
-import { EMAIL_LOGIN, EMAIL_REGISTER, LOGOUT, FB_LOGIN} from '../actions/types';
+import { EMAIL_LOGIN, EMAIL_REGISTER, LOGOUT, FB_LOGIN } from '../actions/types';
 
 const initialState = {
     user: null,
