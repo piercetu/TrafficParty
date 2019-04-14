@@ -22,7 +22,6 @@ import Login from './components/Login';
 import Splash from './components/Splash';
 // import Home from './components/Home';
 
-
 // Navigation ------------------------------------------ /
 const Nav = createAppContainer(
   createStackNavigator({

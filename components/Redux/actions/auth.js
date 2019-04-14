@@ -8,15 +8,11 @@ const lastName = ["people","history","way","art","world","information","map","fa
 export const emailLogin = (email, password) => {
     return dispatch => {
         firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(() => {
-                let user = {
-                    name: firstName[ Math.random() * (firstName.length - 0)] + ' ' + lastName[ Math.random() * (lastName.length - 0)],
-                    email,
-                    uid: result.uid
-                };
-
+            .then(result => {
                 db.collection('users').doc(result.uid)
-                    .then(() => {
+                    .then(doc => {
+                        let { user } = doc;
+                        
                         dispatch({
                             type: EMAIL_LOGIN,
                             payload: user
@@ -28,22 +24,22 @@ export const emailLogin = (email, password) => {
             })
             .catch(err => {
                 console.log(err);
-                emailRegister(email, password, dispatch);
             });
     };
 };
 
 export const emailRegister = (email, password, dispatch) => {
     return () => {
-        firebase.auth().registerWithEmailAndPassword(email, password)
+        firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(result => {
+                console.log(result);
                 let user = {
                     name: firstName[ Math.random() * (firstName.length - 0)] + ' ' + lastName[ Math.random() * (lastName.length - 0)],
                     email,
                     uid: result.uid
                 };
 
-                db.collection('users').doc(result.uid)
+                db.collection('users').doc(result.uid).set(user)
                     .then(() => {
                         dispatch({
                             type: EMAIL_REGISTER,

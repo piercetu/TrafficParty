@@ -5,6 +5,7 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'reac
 export default class Lobby extends PureComponent {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   // Hide the header bar section
