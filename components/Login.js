@@ -65,7 +65,7 @@ class Login extends PureComponent {
 
         {/* Facebook Login Button */}
         <TouchableOpacity style={styles.buttonBlue} onPress={this.logging}
-          onPress={() => navigate('Lobby')}
+          onPress={() => navigate('Home')}
         >
           <Text style={styles.buttonText}>LOG IN WITH FACEBOOK</Text>
         </TouchableOpacity>
