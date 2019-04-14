@@ -1,7 +1,6 @@
 // Lobby Page
 import React, { PureComponent } from 'react';
 import { Image, StyleSheet, Text, TextInput, ScrollView, TouchableOpacity, ImageBackground, View } from 'react-native';
-import Speech from 'react-native-speech';
 
 export default class Final extends PureComponent {
   constructor(props) {
@@ -20,10 +19,6 @@ export default class Final extends PureComponent {
     setTimeout(() => {
       this.setState({ redirect: true });
     }, 10000);
-    Speech.speak({
-      text: 'Amy enters through the front chair, flops onto the overstuffed monkey, and heaves a/an slimy sigh of exhaustion. Jenny comes out of the beanie',
-      voice: 'en-US'
-    });
   }
 
   render() {
