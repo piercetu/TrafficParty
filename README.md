@@ -14,6 +14,9 @@ The app aims to connect the nearby commuters to engage in a fun activity during 
 (We produced trending design patterns to make next app fresh and competitive)
 
 ## How we built it
+** App development **
+- React Native to create the mobile application
+
 **User interface (UI):**
 - Figma (Mockups and Designs)
 - Adobe Illustrator (Illustrations)
