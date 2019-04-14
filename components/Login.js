@@ -44,10 +44,7 @@ class Login extends PureComponent {
   }
 
   render() {
-    // if (this.state.user) {
-    //   this.props.navigation.navigate('Home');
-    //   return null;
-    // }
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Spinner
@@ -72,7 +69,9 @@ class Login extends PureComponent {
         <TextInput style={styles.input} placeholder="e.g. Must be at least 6 characters" />
 
         {/* Sign in Button */}
-        <TouchableOpacity style={styles.buttonPurple}>
+        <TouchableOpacity style={styles.buttonPurple}
+          onPress={() => navigate('Lobby')}
+        >
           <Text style={styles.buttonText}>SIGN IN</Text>
         </TouchableOpacity>
 
