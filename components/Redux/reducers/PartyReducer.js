@@ -1,8 +1,9 @@
-import { JOINED_PARTY, PARTY_NOT_FOUND } from '../actions/types';
+import { JOINED_PARTY, PARTY_NOT_FOUND, ADD_WORDS } from '../actions/types';
 
 const initialState = {
     party: null,
-    error: ''
+    error: '',
+    words: null
 };
 
 export default PartyReducer = (state = initialState, action) => {
@@ -17,6 +18,12 @@ export default PartyReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: 'Party not found, try again'
+            };
+        
+        case ADD_WORDS:
+            return {
+                ...state,
+                words: action.payload
             };
 
         default:

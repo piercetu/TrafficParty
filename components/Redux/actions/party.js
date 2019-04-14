@@ -1,6 +1,6 @@
 import { db } from '../../../firebase';
 
-import { JOINED_PARTY, PARTY_NOT_FOUND } from './types';
+import { JOINED_PARTY, PARTY_NOT_FOUND, ADD_WORDS } from './types';
 
 export const createParty = (user, location) => {
     return dispatch => {
@@ -74,6 +74,8 @@ export const joinParty = (user, location) => {
             });
     }
 }
+
+export const addWords = words => ({ type: ADD_WORDS, payload: words });
 
 function findDistance(lat1, lng1, lat2, lng2) {
 	if ((lat1 == lat2) && (lng1 == lng2)) {

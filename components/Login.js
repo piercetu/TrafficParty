@@ -46,9 +46,8 @@ class Login extends PureComponent {
   render() {
     const { navigate } = this.props.navigation;
     if (this.state.user) {
-      // this.props.navigation.navigate('Home');
+      this.props.navigation.navigate('Home');
       // return null;
-      console.log(this.state.user);
     }
     return (
       <View style={styles.container}>

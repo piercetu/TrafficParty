@@ -11,3 +11,4 @@ export const LOGOUT = 'logout';
  */
 export const PARTY_NOT_FOUND = 'party_not_found';
 export const JOINED_PARTY = 'joined_party';
+export const ADD_WORDS = 'add_words';
