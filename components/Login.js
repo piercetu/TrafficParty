@@ -5,7 +5,7 @@ import Spinner from 'react-native-loading-spinner-overlay';
 
 import { connect } from 'react-redux';
 
-import { facebookLogin } from './Redux/actions/auth';
+import { facebookLogin, emailLogin, emailRegister } from './Redux/actions/auth';
 
 class Login extends PureComponent {
   constructor(props) {
@@ -44,10 +44,11 @@ class Login extends PureComponent {
   }
 
   render() {
-    // if (this.state.user) {
-    //   this.props.navigation.navigate('Home');
-    //   return null;
-    // }
+    if (this.state.user) {
+      // this.props.navigation.navigate('Home');
+      // return null;
+      console.log(this.state.user);
+    }
     return (
       <View style={styles.container}>
         <Spinner
@@ -67,17 +68,17 @@ class Login extends PureComponent {
         </TouchableOpacity>
 
         <Text style={styles.label}>Email</Text>
-        <TextInput style={styles.input} placeholder="e.g. john.smith@gmail.com" />
+        <TextInput autoCapitalize={'none'} autoComplete={false} autoCorrect={false} value={this.state.email} onChangeText={email => this.setState({ email })} style={styles.input} placeholder="e.g. john.smith@gmail.com" />
         <Text style={styles.label}>Password</Text>
-        <TextInput style={styles.input} placeholder="e.g. Must be at least 6 characters" />
+        <TextInput autoCapitalize={'none'} autoComplete={false} autoCorrect={false} secureTextEntry value={this.state.password} onChangeText={password => this.setState({ password })} style={styles.input} placeholder="e.g. Must be at least 6 characters" />
 
         {/* Sign in Button */}
-        <TouchableOpacity style={styles.buttonPurple}>
+        <TouchableOpacity style={styles.buttonPurple} onPress={() => this.props.emailLogin(this.state.email, this.state.password)}>
           <Text style={styles.buttonText}>SIGN IN</Text>
         </TouchableOpacity>
 
         {/* Create account Button */}
-        <TouchableOpacity style={styles.buttonTeal}>
+        <TouchableOpacity style={styles.buttonTeal} onPress={() => this.props.emailRegister(this.state.email, this.state.password)}>
           <Text style={styles.buttonText}>CREATE AN ACCOUNT</Text>
         </TouchableOpacity>
       </View>
@@ -161,4 +162,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { facebookLogin })(Login);
+export default connect(mapStateToProps, { facebookLogin, emailLogin, emailRegister })(Login);

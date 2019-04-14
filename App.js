@@ -20,12 +20,13 @@ import configureStore from './components/Redux/configureStore';
 import Lobby from './components/Lobby';
 import Login from './components/Login';
 import Splash from './components/Splash';
-
+// import Home from './components/Home';
 
 // Navigation ------------------------------------------ /
 const Nav = createAppContainer(
   createStackNavigator({
-    Login: { screen: Login }
+    Login: { screen: Login },
+    // Home: { screen: Home }
   })
 );
 
