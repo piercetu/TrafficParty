@@ -25,8 +25,10 @@ import Splash from './components/Splash';
 // Navigation ------------------------------------------ /
 const Nav = createAppContainer(
   createStackNavigator({
+    // Home: { screen: Home },
     Login: { screen: Login },
-    // Home: { screen: Home }
+    Lobby: { screen: Lobby },
+    Splash: { screen: Splash },
   })
 );
 

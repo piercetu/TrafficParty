@@ -44,6 +44,7 @@ class Login extends PureComponent {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
     if (this.state.user) {
       // this.props.navigation.navigate('Home');
       // return null;
@@ -63,7 +64,9 @@ class Login extends PureComponent {
         <Text style={styles.h1}>Login to start partying</Text>
 
         {/* Facebook Login Button */}
-        <TouchableOpacity style={styles.buttonBlue} onPress={this.logging}>
+        <TouchableOpacity style={styles.buttonBlue} onPress={this.logging}
+          onPress={() => navigate('Lobby')}
+        >
           <Text style={styles.buttonText}>LOG IN WITH FACEBOOK</Text>
         </TouchableOpacity>
 
