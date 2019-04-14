@@ -9,7 +9,7 @@ export const emailLogin = (email, password) => {
     return dispatch => {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(result => {
-                db.collection('users').doc(result.uid)
+                db.collection('users').doc(result.user.uid)
                     .then(doc => {
                         let { user } = doc;
                         
@@ -32,14 +32,13 @@ export const emailRegister = (email, password, dispatch) => {
     return () => {
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(result => {
-                console.log(result);
                 let user = {
                     name: firstName[ Math.random() * (firstName.length - 0)] + ' ' + lastName[ Math.random() * (lastName.length - 0)],
                     email,
                     uid: result.uid
                 };
 
-                db.collection('users').doc(result.uid).set(user)
+                db.collection('users').doc(result.user.uid).set(user)
                     .then(() => {
                         dispatch({
                             type: EMAIL_REGISTER,
@@ -60,7 +59,7 @@ export const logout = () => ({ type: LOGOUT, user: null });
 
 export const facebookLogin = () => {
     return dispatch => {
-        var provider = new firebase.auth.FacebookAuthProvider();
+        var provider = new firebase.auth().FacebookAuthProvider();
         
         firebase.auth().signInWithPopup(provider)
             .then(result => {
