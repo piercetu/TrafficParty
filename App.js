@@ -1,7 +1,7 @@
 /**
  * ------------------------------------------------------ /
  * The main container for imports and navigation
- * Default page is xxxx.js
+ * Default page is Login
  * ------------------------------------------------------ /
  */
 
@@ -13,7 +13,6 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 // Redux Imports ----------------------------------------- /
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-
 import configureStore from './components/Redux/configureStore';
 
 // Auth Screens Import ---------------------------------- /
