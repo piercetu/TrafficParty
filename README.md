@@ -4,8 +4,6 @@
 ## Inspiration
 **L.A.'s traffic congestion is the world's worst for sixth straight year, according to a report by INRIX ([source](https://www.latimes.com/local/lanow/la-me-la-worst-traffic-20180206-story.html)).** Despite the city spending $1.6 billion and 5 years to expand the 405 Freeway Sepulveda Pass to add a lane for each direction, the Los Angeles County Metropolitan Transportation Authority conducted a study showing traffic time has gotten worse ([source](https://www.scpr.org/blogs/economy/2014/10/10/17413/405-traffic-a-little-slower-after-1-billion-upgrad)). Adding more road capacity does not reduce traffic congestion; rather, it just causes more driving. **To accommodate L.A. slow traffic, we believe that our mobile application can underpinnings the frustration of waiting in traffic.**
 
-![Make fun during waiting on Traffic](https://i.imgur.com/4Duxjaq.gif)
-
 ## What it does
 Sick of Los Angeles traffic? Take the frustration away with the Traffic Party app, available on iOS! 
 The app aims to connect the nearby commuters to engage in a fun activity during their long commute.  You can simply host a traffic party which will notify the nearby commuters to join in on the fun - or join a party that is already happening nearby. The current available game is similar to Mad Libs, where each users in the party will take turn answering the prompt (noun, verb, adjective, etc). Upon completion, the app will read back the collective work produced by the entire party members. We’ve incorporated the text-to-speech feature to ensure that the game will not interfere with the driving.
