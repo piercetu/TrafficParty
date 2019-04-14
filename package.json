@@ -5,8 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "initial-ios": "yarn && yarn run ios",
-    "initial-android": "yarn && yarn run android"
+    "initial-ios": "npm install && npm run ios",
+    "initial-android": "npm install && npm run android"
   },
   "dependencies": {
     "expo": "^32.0.0",

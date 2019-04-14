@@ -37,6 +37,8 @@ export const logout = () => ({ type: LOGOUT, user: null });
 
 export const facebookLogin = () => {
     return dispatch => {
+        var provider = new firebase.auth.FacebookAuthProvider();
+        
         firebase.auth().signInWithPopup(provider)
             .then(result => {
                 var FACEBOOK_API_TOKEN = result.credential.accessToken;

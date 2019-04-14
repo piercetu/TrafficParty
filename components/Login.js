@@ -60,7 +60,7 @@ class Login extends PureComponent {
 
         <Image style={styles.logo} source={require('../resources/logo.png')} />
         <Text style={styles.h1}>Login to start partying</Text>
-        <TouchableOpacity onPress={this.logging}>
+        <TouchableOpacity onPress={this.handleFacebookLoginOnPress}>
           <Image style={styles.buttonFacebook} source={require('../resources/button-facebook.png')} />
         </TouchableOpacity>
       </View>
