@@ -21,6 +21,7 @@ import Lobby from './components/Lobby';
 import Login from './components/Login';
 import Splash from './components/Splash';
 import Home from './components/Home';
+import Final from './components/Final';
 
 // Navigation ------------------------------------------ /
 const Nav = createAppContainer(
@@ -28,6 +29,7 @@ const Nav = createAppContainer(
     Login: { screen: Login },
     Home: { screen: Home },
     Lobby: { screen: Lobby },
+    Final: { screen: Final },
     Splash: { screen: Splash },
   })
 );
