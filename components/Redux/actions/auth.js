@@ -12,11 +12,9 @@ export const emailLogin = (email, password) => {
             .then(result => {
                 db.collection('users').doc(result.user.uid).get()
                     .then(doc => {
-                        // console.log(doc);
-                        console.log(doc.data());
                         dispatch({
                             type: EMAIL_LOGIN,
-                            payload: user
+                            payload: doc.data()
                         });
                     })
                     .catch(err => {
