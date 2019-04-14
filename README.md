@@ -2,9 +2,7 @@
 (Party on the go! Defeat Los Angeles' insanely long traffic congestion!)
 
 ## Inspiration
-**L.A.'s traffic congestion is the world's worst for sixth straight year, according to a report by INRIX ([source](https://www.latimes.com/local/lanow/la-me-la-worst-traffic-20180206-story.html)).** Despite the city spending $1.6 billion and 5 years to expand the 405 Freeway Sepulveda Pass to add a lane for each direction, the Los Angeles County Metropolitan Transportation Authority conducted a study showing traffic time has gotten worse ([source](https://www.scpr.org/blogs/economy/2014/10/10/17413/405-traffic-a-little-slower-after-1-billion-upgrad)). Adding more road capacity does not reduce traffic congestion; rather, it just causes more driving. **To accommodate L.A. slow traffic, we believe that our mobile application can underpinnings the frustration of waiting in traffic.**
-
-![Make fun during waiting on Traffic](https://i.imgur.com/4Duxjaq.gif)
+**L.A.'s traffic congestion is the world's worst for sixth straight year, according to a report by INRIX ([source](https://www.latimes.com/local/lanow/la-me-la-worst-traffic-20180206-story.html)).** Despite the city spending $1.6 billion and 5 years to expand the 405 Freeway Sepulveda Pass to add a lane for each direction, the Los Angeles County Metropolitan Transportation Authority conducted a study showing traffic time has gotten worse ([source](https://www.scpr.org/blogs/economy/2014/10/10/17413/405-traffic-a-little-slower-after-1-billion-upgrad)). Adding more road capacity does not reduce traffic congestion; rather, it just causes more driving. **To accommodate L.A. slow traffic, we believe that our mobile application can underpin the frustration of waiting in traffic.**
 
 ## What it does
 Sick of Los Angeles traffic? Take the frustration away with the Traffic Party app, available on iOS! 
